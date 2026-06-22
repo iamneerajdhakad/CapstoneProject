@@ -1,0 +1,5 @@
+qa:
+  ui_url:  'https://parabank.parasoft.com'
+  api_url:  'https://parabank.parasoft.com/parabank/services/bank/'
+  username:  'john'
+  password:  'demo'

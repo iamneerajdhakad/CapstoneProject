@@ -1,0 +1,6 @@
+*** Test Cases ***,${first_name},${last_name},${address},${city},${state},${zipcode},${phone_number},${ssn},${user},${pass},${confirm}
+Register johndoe,Jacob,Doe,123qwerty,London,Times Square,10001,9876543210,123456,johndoe,Pass@123,Pass@123
+Register emmasmith,Luffy,D,East Blue,New World,IL,60601,9876543211,567890,emmasmith,Pass@124,Pass@124
+Register mjohnson,Nami,Nav,Cocoyasi,New World,TX,75201,9876543212,678901,mjohnson,Pass@125,Pass@125
+Register sophiaw,Brook,Espira,Espira,New World,WA,98101,9876543213,789012,sophiaw,Pass@126,Pass@126
+Register davidb,Sanji,Vinsmoke,Baratie,New World,FL,33101,9876543214,890123,davidb,Pass@127,Pass@127
