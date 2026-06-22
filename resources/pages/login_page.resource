@@ -8,7 +8,7 @@ Login To Application
 
     Wait Until Element Is Visible    ${username_login_field}
     Input Text    ${username_login_field}    ${user}
-
+    
     Wait Until Element Is Visible    ${password_login_field}
     Input Text    ${password_login_field}    ${pass}
 

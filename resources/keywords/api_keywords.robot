@@ -11,7 +11,8 @@ ${accountId}  13344
 
 *** Keywords ***
 Clean DB
-    Create Session    ${API_SESSION}    ${API_URL}  verify=false
+    # used static URL because in UI registration test case we need to clean the DB first and hence it should work without API Environment
+    Create Session    ${API_SESSION}    https://parabank.parasoft.com/parabank/services/bank/  verify=false
     POST On Session  ${API_SESSION}  /cleanDB
 
 Load Api Environment And Create Session

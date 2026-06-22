@@ -1,29 +1,32 @@
-datasources:b5348b5856ad93ddad12b8244978ba259559f6b6
-commandlineoptions:704890782fd9626777aca0c84f8dcac1a279eaa9
+datasources:afa540b919cf0dc68531cc5b11d9a1be09a3a82f
+commandlineoptions:65f95c924ba97541f47949701c4e3c51192a5b43
 suitesfrom:no-suites-from-option
-file:7115df6864ed1d6ef1406b236785a8b84d882daa
---test Tests.Api.Test Create Account.TC-API-05 Create CHECKING Account via API
---test Tests.Api.Test Create Account.TC-API-06 Create CHECKING Account via API
---test Tests.Api.Test Create Account.TC-API-07 Create CHECKING Account via API
---test Tests.Api.Test Customer Accounts.TC-API-02 Get Customer Accounts Validate Status Code
---test Tests.Api.Test Get Account Details.TC-API-03 GET Account Details by ID
---test Tests.Api.Test Get All Transactions.TC-API-04 GET Transactions for Account ID
---test Tests.Api.Test Login.TC-API-01 Test Login via API
---test Tests.Api.Test Transfer Funds.TC-API-08 Transfer Funds via API
---test Tests.Api.Test Verify Account Types.TC-API-09 Verify Account Fields and Data Types
+file:d9baaa2ab1acac11c3fa308f229f1f1673c3df45
+--test Tests.Api.Account Api.TC-API-02 Get Customer Accounts Validate Status Code
+--test Tests.Api.Account Api.TC-API-03 GET Account Details by ID
+--test Tests.Api.Account Api.TC-API-04 GET Transactions for Account ID
+--test Tests.Api.Account Api.TC-API-05 Create CHECKING Account via API
+--test Tests.Api.Account Api.TC-API-06 Create SAVINGS Account via API
+--test Tests.Api.Account Api.TC-API-07 Create LOAN Account via API
+--test Tests.Api.Account Api.TC-API-09 Verify Account Fields and Data Types
+--test Tests.Api.Authentication Api.TC-API-01 Test Login via API
+--test Tests.Api.Transfer Api.TC-API-08 Transfer Funds via API
 --test Tests.E2E.Test Account Number Validation.TC-E2E-01 Create CHECKING Account via UI → Validate Exists via API
 --test Tests.E2E.Test Account Type Validation.TC-E2E-02 Create Account via UI → Validate Account Type via API
 --test Tests.E2E.Test Before After Amount Validation.TC-E2E-03 UI Fund Transfer → Validate Balance Delta via API
 --test Tests.Performance.Test Api Response Time.TC-PERF-01 API Response Time Under 2 Seconds
---test Tests.Ui.Test Fund Transfer.TC-TF-UI-01 Transfer Funds Between Two Accounts via UI
---test Tests.Ui.Test Login.TC-LGN-01 Authenticate with Valid Credentials
---test Tests.Ui.Test Login.TC-LGN-02 Authenticate with Invalid Credentials
---test Tests.Ui.Test Login.TC-LGN-03 Authenticate with Empty Credentials
---test Tests.Ui.Test Logout.TC-LGN-04 Logout From Application
+--test Tests.Ui.Test Fund Transfer.TC-TF-01 Transfer Funds Between Two Accounts via UI
+--test Tests.Ui.Test Fund Transfer.TC-NEG-TF-02 Transfer Amount Greater Than The Balance
+--test Tests.Ui.Test Fund Transfer.TC-NEG-TF-03 Transfer to Same Account – Should Be Rejected
+--test Tests.Ui.Test Fund Transfer.TC-NEG-TF-04 Transfer to Negative Account – Should Be Rejected
+--test Tests.Ui.Test Fund Transfer.TC-NEG-TF-05 Transfer to Zero Account – Should Be Rejected
+--test Tests.Ui.Test Login Logout.TC-LGN-01 Authenticate with Valid Credentials
+--test Tests.Ui.Test Login Logout.TC-NEG-LGN-02 Authenticate with Invalid Credentials
+--test Tests.Ui.Test Login Logout.TC-NEG-LGN-03 Authenticate with Empty Credentials
+--test Tests.Ui.Test Login Logout.TC-LGN-04 Logout From Application
 --test Tests.Ui.Test Open New Account.TC-OA-UI-01 Open New SAVINGS Account via UI
 --test Tests.Ui.Test Open New Account.TC-OA-UI-02 Open New CHECKING Account via UI
 --test Tests.Ui.Test Registration.TC-UI-01 Register New User With Valid Data
 --test Tests.Ui.Test Registration.TC-UI-02 Register User with Password and Confirm Password Mismatch
 --test Tests.Ui.Test Registration.TC-UI-03 Register User with Empty/Blank Fields
 --test Tests.Ui.Test Registration.TC-UI-04 Register User That Is Already Exsisting
---test Tests.Ui.Test Request Loan.TC-LOAN-01 Apply For Loan Using Valid Account

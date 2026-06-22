@@ -33,6 +33,7 @@ robotmetrics-report/
 # PYCHARM IDE FILES
 # ================================
 .idea
+Deliverables
 .idea/
 *.iml
 *.iws
