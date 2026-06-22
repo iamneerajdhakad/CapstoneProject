@@ -20,6 +20,7 @@ TC-E2E-02 Create Account via UI → Validate Account Type via API
     Login To Application    ${USERNAME}    ${PASSWORD}
     ${new_number}=  Open New Account  type=CHECKING
     ${response}=  Get Method    /accounts/${new_number}
-    ${body}=  Set Variable  ${response.text}
+    Should Be Equal As Integers    ${response.status_code}    200
+    ${body}=  Set Variable  ${response.json()}
     ${type}=  Get From Dictionary    ${body}    type
     Should Be Equal As Strings    CHECKING    ${type}

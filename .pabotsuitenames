@@ -1,7 +1,7 @@
-datasources:afa540b919cf0dc68531cc5b11d9a1be09a3a82f
-commandlineoptions:65f95c924ba97541f47949701c4e3c51192a5b43
+datasources:6b3845b17f2af963d4f058d7025e429535c82bc0
+commandlineoptions:704890782fd9626777aca0c84f8dcac1a279eaa9
 suitesfrom:no-suites-from-option
-file:d9baaa2ab1acac11c3fa308f229f1f1673c3df45
+file:24277099caefe70ce52f22d79ec83dea44e56969
 --test Tests.Api.Account Api.TC-API-02 Get Customer Accounts Validate Status Code
 --test Tests.Api.Account Api.TC-API-03 GET Account Details by ID
 --test Tests.Api.Account Api.TC-API-04 GET Transactions for Account ID
@@ -16,10 +16,6 @@ file:d9baaa2ab1acac11c3fa308f229f1f1673c3df45
 --test Tests.E2E.Test Before After Amount Validation.TC-E2E-03 UI Fund Transfer → Validate Balance Delta via API
 --test Tests.Performance.Test Api Response Time.TC-PERF-01 API Response Time Under 2 Seconds
 --test Tests.Ui.Test Fund Transfer.TC-TF-01 Transfer Funds Between Two Accounts via UI
---test Tests.Ui.Test Fund Transfer.TC-NEG-TF-02 Transfer Amount Greater Than The Balance
---test Tests.Ui.Test Fund Transfer.TC-NEG-TF-03 Transfer to Same Account – Should Be Rejected
---test Tests.Ui.Test Fund Transfer.TC-NEG-TF-04 Transfer to Negative Account – Should Be Rejected
---test Tests.Ui.Test Fund Transfer.TC-NEG-TF-05 Transfer to Zero Account – Should Be Rejected
 --test Tests.Ui.Test Login Logout.TC-LGN-01 Authenticate with Valid Credentials
 --test Tests.Ui.Test Login Logout.TC-NEG-LGN-02 Authenticate with Invalid Credentials
 --test Tests.Ui.Test Login Logout.TC-NEG-LGN-03 Authenticate with Empty Credentials

@@ -18,13 +18,17 @@ Initialize E2E Suite
 *** Test Cases ***
 TC-E2E-03 UI Fund Transfer → Validate Balance Delta via API
     [Tags]  e2e  smoke
+
     Login To Application    ${USERNAME}    ${PASSWORD}
 
     ${number1}=  Open New Account  type=CHECKING
     ${number2}=  Open New Account  type=CHECKING
 
     ${response1}=  Get Method    /accounts/${number1}
+    Should Be Equal As Integers    ${response1.status_code}    200
+
     ${response2}=  Get Method    /accounts/${number2}
+    Should Be Equal As Integers    ${response2.status_code}    200
 
     ${body1}=  Set Variable  ${response1.json()}
     ${body2}=  Set Variable  ${response2.json()}
@@ -35,18 +39,21 @@ TC-E2E-03 UI Fund Transfer → Validate Balance Delta via API
 
     Transfer Funds  ${number2}  ${number1}  ${amount}
     Page Should Contain    Transfer Complete!
+
     Validate Transfer Details    ${number2}    ${number1}    ${amount}
 
     ${response1}=  Get Method    /accounts/${number1}
+    Should Be Equal As Integers    ${response1.status_code}    200
     ${body}=  Set Variable  ${response1.json()}
+
     ${after_amount1}=  Get From Dictionary    ${body}    balance
     ${before_amount1}  Evaluate    ${amount_1}+${amount}
-    Log To Console    ${before_amount1}
-    Log To Console    ${after_amount1}
     Should Be Equal As Integers    ${after_amount1}    ${before_amount1}
 
     ${response2}=  Get Method    /accounts/${number2}
+    Should Be Equal As Integers    ${response2.status_code}    200
     ${body}=  Set Variable  ${response2.json()}
+
     ${after_amount2}=  Get From Dictionary    ${body}    balance
     ${before_amount2}  Evaluate    ${amount_2}-${amount}
     Should Be Equal As Integers    ${after_amount2}    ${before_amount2}

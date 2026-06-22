@@ -20,7 +20,8 @@ TC-E2E-01 Create CHECKING Account via UI → Validate Exists via API
     Login To Application    ${USERNAME}    ${PASSWORD}
     ${new_number}=  Open New Account  type=CHECKING
     ${response}=  Get Method    /accounts/${new_number}
-    ${body}=  Set Variable  ${response.text}
+    Should Be Equal As Integers    ${response.status_code}    200
+    ${body}=  Set Variable  ${response.json()}
     Log To Console    ${body}
     ${numer_api}=  Get From Dictionary    ${body}    id
     Should Be Equal As Integers    ${new_number}    ${numer_api}

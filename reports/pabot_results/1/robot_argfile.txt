@@ -1,0 +1,16 @@
+--test E2E.Test Account Type Validation.TC-E2E-02 Create Account via UI → Validate Account Type via API
+--variable CALLER_ID:43258b02664c4bd595ec6cf85fe73f20
+--variable PABOTLIBURI:127.0.0.1:8270
+--variable PABOTEXECUTIONPOOLID:0
+--variable PABOTISLASTEXECUTIONINPOOL:0
+--variable PABOTNUMBEROFPROCESSES:6
+--variable PABOTQUEUEINDEX:1
+--variable PABOTLASTLEVEL:E2E.Test Account Type Validation
+--outputdir .\reports\pabot_results\1
+--output output.xml
+--log NONE
+--report NONE
+--xunit NONE
+--consolecolors off
+--consolemarkers off
+.\tests\e2e\
