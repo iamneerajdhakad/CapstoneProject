@@ -1,7 +1,7 @@
 *** Settings ***
-Resource  ../../resources/pages/login_page.resource
-Resource  ../../resources/pages/registration_page.resource
-Resource  ../../resources/pages/account_page.resource
+Resource  ../../resources/pages/login_page.robot
+Resource  ../../resources/pages/registration_page.robot
+Resource  ../../resources/pages/account_page.robot
 Resource    ../../resources/keywords/api_keywords.robot
 
 Suite Setup  Initialize E2E Suite

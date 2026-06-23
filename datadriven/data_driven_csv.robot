@@ -1,6 +1,6 @@
 *** Settings ***
 Resource  ../resources/keywords/common_keywords.robot
-Resource  ../resources/pages/registration_page.resource
+Resource  ../resources/pages/registration_page.robot
 Resource    ../resources/keywords/api_keywords.robot
 
 Library    DataDriver   file=${EXECDIR}/testdata/login_data.csv  dialect=excel
@@ -8,7 +8,7 @@ Library    DataDriver   file=${EXECDIR}/testdata/login_data.csv  dialect=excel
 Suite Setup  Load Environment
 Test Setup  Open Application
 Test Teardown  Close Browser
-Test Template  Register New User To Apllication
+Test Template  Register New User To Application
 
 
 *** Test Cases ***
@@ -17,10 +17,11 @@ TC-DD-01 5 Concurrent API Requests  ${first_name}  ${last_name}  ${address}  ${c
    [Tags]   datadriver
 
 *** Keywords ***
-Register New User To Apllication
+Register New User To Application
     [Arguments]  ${first_name}  ${last_name}  ${address}  ${city}  ${state}  ${zipcode}  ${phone_number}  ${ssn}  ${user}  ${pass}  ${confirm}
     Clean DB
     Open Registration Page
+    Wait Until Element Is Visible    ${first_name_field}  timeout=10s
     Input Text    ${first_name_field}    ${first_name}
     Input Text    ${last_name_field}    ${last_name}
     Input Text    ${address_field}    ${address}

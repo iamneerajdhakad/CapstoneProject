@@ -16,7 +16,7 @@ build/
 # ================================
 # ROBOT FRAMEWORK REPORTS & LOGS
 # ================================
-Deliverables/Automation QA Deliverables/reports/
+Deliverables/test_reports_passed/reports/
 output.xml
 log.html
 report.html

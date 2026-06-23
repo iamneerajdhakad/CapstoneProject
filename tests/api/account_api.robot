@@ -7,37 +7,48 @@ Suite Teardown  Delete All Sessions
 *** Test Cases ***
 TC-API-02 Get Customer Accounts Validate Status Code
     [Tags]  api  regression
+
     ${response}  Get Method    /customers/${customerId}/accounts
     Validate Status Code    ${response}    200
+
     ${body}  Set Variable  ${response.json()}
     Log To Console    ${body}
 
 TC-API-03 GET Account Details by ID
     [Tags]  api  regression
+
     ${account_Id}=  Get Account ID
     ${response}=  Get Method    /accounts/${account_Id}
     Validate Status Code    ${response}    200
+
     ${body}=  Set Variable  ${response.json()}
     Log To Console    ${body}
 
 TC-API-04 GET Transactions for Account ID
     [Tags]  api
+
     ${response}=  Get Method    /accounts/${accountId}/transactions
     Validate Status Code    ${response}    200
+
     ${body}=  Set Variable  ${response.json()}
     Log To Console    ${body}
 
 TC-API-05 Create CHECKING Account via API
     [Tags]  api  regression
+
     ${response}=  Create Account via API    CHECKING
     Validate Status Code    ${response}    200
-    Log To Console    ${response.json()}
+
+    ${body}=  Set Variable  ${response.json()}
+    Log To Console    ${body}
 
 TC-API-06 Create SAVINGS Account via API
     [Tags]  api  regression
     ${response}=  Create Account via API    SAVINGS
     Validate Status Code    ${response}    200
-    Log To Console    ${response.json()}
+
+    ${body}=  Set Variable  ${response.json()}
+    Log To Console    ${body}
 
 TC-API-07 Create LOAN Account via API
     [Tags]  api

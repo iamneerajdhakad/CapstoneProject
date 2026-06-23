@@ -1,7 +1,7 @@
 *** Settings ***
-Resource  ../../resources/pages/transfer_page.resource
-Resource  ../../resources/pages/login_page.resource
-Resource  ../../resources/pages/account_page.resource
+Resource  ../../resources/pages/transfer_page.robot
+Resource  ../../resources/pages/login_page.robot
+Resource  ../../resources/pages/account_page.robot
 Resource  ../../resources/keywords/common_keywords.robot
 
 Suite Setup  Load Environment
@@ -23,7 +23,7 @@ TC-TF-01 Transfer Funds Between Two Accounts via UI
     Page Should Contain    Transfer Complete!
     Validate Transfer Details    ${from_account_number}    ${to_account_number}    ${amount}
 
-TC-NEG-TF-02 Transfer Amount Greater Than The Balance
+TC-NEG-TF-02 Transfer Amount Greater Than The Balance – Should Be Rejected
     [Tags]  defect
     Login To Application    ${USERNAME}    ${PASSWORD}
     ${from_account_number}=  Open New Account

@@ -7,6 +7,7 @@ Suite Teardown  Delete All Sessions
 *** Test Cases ***
 TC-API-08 Transfer Funds via API
     [Tags]  api  regression  smoke
+
     ${response1}=  Create Account via API    CHECKING
     Should Be Equal As Integers    ${response1.status_code}    200
     

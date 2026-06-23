@@ -1,7 +1,7 @@
-datasources:6b3845b17f2af963d4f058d7025e429535c82bc0
-commandlineoptions:704890782fd9626777aca0c84f8dcac1a279eaa9
+datasources:d1b6d9af030ae30529021190d7e0aab39f97eaa0
+commandlineoptions:bb70e138a2cc769bfc036ae73f5bed7a8fc79345
 suitesfrom:no-suites-from-option
-file:24277099caefe70ce52f22d79ec83dea44e56969
+file:34a6a3bda29253a0bf06f3c1f52c1d4582d83f34
 --test Tests.Api.Account Api.TC-API-02 Get Customer Accounts Validate Status Code
 --test Tests.Api.Account Api.TC-API-03 GET Account Details by ID
 --test Tests.Api.Account Api.TC-API-04 GET Transactions for Account ID

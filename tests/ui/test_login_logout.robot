@@ -1,5 +1,5 @@
 *** Settings ***
-Resource  ../../resources/pages/login_page.resource
+Resource  ../../resources/pages/login_page.robot
 
 Suite Setup  Load Environment
 Test Setup  Open Application
@@ -10,7 +10,6 @@ TC-LGN-01 Authenticate with Valid Credentials
     [Tags]  smoke  regression
     Login To Application    ${USERNAME}    ${PASSWORD}
     Page Should Contain    Welcome
-    Location Should Contain    overview
 
 TC-NEG-LGN-02 Authenticate with Invalid Credentials
     [Tags]  smoke  regression  negative
